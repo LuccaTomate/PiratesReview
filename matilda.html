@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+  color: #000000;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header{
+  width: 100%;
+  height: 100px;
+  background-color: #e0e0e0;
+  border-bottom: 10px solid #a7a9df;
+}
+header img{
+  margin-top: 10px;
+  margin-left: 30px;
+}
+body{
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+
+.ondinha{
+  z-index: 1;
+  margin-left: -35px;
+  margin-top: 90px;
+  animation: onda2 20s ease-out infinite;
+}
+
+.quadrado{
+  z-index: 2;
+  position: absolute;
+  margin-top: 0px;
+  width: 400px;
+  height: 89%;
+  background-color: #e6e6e6;
+  opacity: 100%;
+  border-right: 5px solid #a7a9df;
+}
+
+.lista {
+  z-index: 2;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  position: absolute;
+  font-size: 40px;
+  margin-top: 70px;
+  margin-bottom: 20px;
+  margin-left: 60px;
+
+}
+
+.lista li:hover{
+  opacity: 0.60;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.lista a{
+  text-decoration: none;
+}
+
+.lista ul{
+  list-style-type: none;
+}
+
+.lista li{
+  margin-top: 50px;
+}
+
+.quadrado2{
+  z-index: 1;
+
+  position: absolute;
+  width: 880px;
+  height: 800px;
+  background-color: #f7f7f7;
+  margin-left: 550px;
+  margin-top: 40px;
+  border-radius: 20px;
+  border: 5px solid #9d9fce;
+  opacity: 95%;
+}
+
+.rodape{  
+  z-index: 3;
+
+  border-top: 5px solid #a7a9df;
+  position: relative;
+  width: 100%r;
+  height: 70px;
+  background-color: #192946;
+  margin-top: -200px;
+
+}
+.rodape p{
+  z-index: 2;
+  color: #fcfce2;
+  margin-left: 300px;
+  margin-top: 8px;
+  text-align: center;
+  font-size: 30px;
+}
+
+
+
+.divisor{
+  z-index: 4;
+  position: absolute;
+  width: 0px;
+  height: 800px;
+  background-color: #f7f7f7;
+  margin-left: 1050px;
+  margin-top: 40px;
+  border-radius: 20px;
+  border: 5px solid #9d9fce;
+  opacity: 95%;
+}
+
+h2 {
+  font-weight: 800;
+}
+
+p {
+  font-weight: 500
+}
+
+.titulosinopse {
+  z-index: 4;
+  text-align: center;
+  position: absolute;
+  font-size: 50px;
+  margin-top: 50px;
+  margin-left: 600px;
+}
+.titulosinopse img{
+  margin-top: 40px;
+  width: 400px;
+  border: 5px solid rgb(130, 102, 255);
+  border-radius: 10px;
+}
+
+.diretorsinopse {
+  display: flex;
+  z-index: 4;
+  text-align: start;
+  position: absolute;
+  font-size: 14px;
+  margin-top: 100px;
+  margin-left: 1072px;
+}
+.diretorsinopse p{
+  text-align: start;
+  margin-top: 7px;
+  margin-left: 5px;
+}
+
+.elencosinopse {
+  width: 350px;
+  display: flex;
+  z-index: 4;
+  text-align: start;
+  position: absolute;
+  font-size: 14px;
+  margin-top: 140px;
+  margin-left: 1072px;
+}
+.elencosinopse p{
+  text-align: start;
+  margin-top: 7px;
+  margin-left: 5px;
+}
+
+.generosinopse {
+  width: 350px;
+  display: flex;
+  z-index: 4;
+  text-align: start;
+  position: absolute;
+  font-size: 14px;
+  margin-top: 190px;
+  margin-left: 1072px;
+}
+.generosinopse p{
+  text-align: start;
+  margin-top: 7px;
+  margin-left: 5px;
+}
+
+
+.censurasinopse {
+  width: 350px;
+  display: flex;
+  z-index: 4;
+  text-align: start;
+  position: absolute;
+  font-size: 14px;
+  margin-top: 230px;
+  margin-left: 1072px;
+}
+.censurasinopse p{
+  text-align: start;
+  margin-top: 7px;
+  margin-left: 5px;
+}
+
+.temposinopse {
+  width: 350px;
+  display: flex;
+  z-index: 4;
+  text-align: start;
+  position: absolute;
+  font-size: 14px;
+  margin-top: 270px;
+  margin-left: 1072px;
+}
+.temposinopse p{
+  text-align: start;
+  margin-top: 7px;
+  margin-left: 5px;
+}
+
+.resumosinopse {
+  width: 350px;
+  display: block;
+  z-index: 4;
+  text-align: start;
+  position: absolute;
+  font-size: 14px;
+  margin-top: 330px;
+  margin-left: 1072px;
+}
+.resumosinopse h2{
+  font-size: 35px;
+  text-align: center;
+}
+.resumosinopse p{
+  font-weight: 500;
+  width: 350px;
+  text-align: start;
+  margin-top: 7px;
+  margin-left: 0px;
+}
+
+.voltar {
+  text-align: center;
+  margin-top: 35px;
+  font-weight: 400;
+  font-style: italic;
+}
+.voltar a{
+  font-size: 45px;
+  color: rgba(92, 163, 255, 0.829);
+}
+
+
+
+
+
+
+
+
+
+          @keyframes onda2 {
+            0% {
+                transform: translateX(0%);
+                
+            }
+            50%{
+                transform: translateX(90px);
+            }
+            100%{
+                transform: translateX(0px);
+                
+            }
+          }
+
+
+</style>
+<body>
+  <header>
+    <img src="IMG/logo.png" alt="" width="300px" style="margin-bottom: 5px; margin-left: 1400px;">
+    <img src="IMG/pirata.png" alt="" width="90px">
+    
+  </header>
+  <div class="quadrado"></div>
+  <div class="quadrado2"></div>
+
+<div class="lista">
+  <ul>
+    <li><a href="index.html">Principal</a></li>
+    <li><a href="filmes.html">Filmes</a></li>
+    <li><a href="trailers.html">Trailers</a></li>
+    <li><a href="trilhasonora.html">Trilha Sonora</a></li>
+    <li><a href="contato.html">Contatos</a></li>
+    <li><a href="sobre.html">Sobre</a></li>
+  </ul>
+</div>
+
+<div class="divisor"></div>
+<div class="sinopse">
+  <div class="titulosinopse">
+    <h1>Matilda</h1>
+    <img src="IMG/matilda.jpg">
+  </div>
+  <div class="diretorsinopse">
+    <h2>Diretor:</h2>
+    <p>Danny DeVito</p>
+  </div>
+  <div class="elencosinopse">
+    <h2>Elenco:</h2>
+    <p>Mara Wilson, Danny DeVito, Rhea Perlman.</p>
+  </div>
+  <div class="generosinopse">
+    <h2>Genero:</h2>
+    <p> Comédia, Fantasia.</p>
+  </div>
+  <div class="censurasinopse">
+    <h2>Censura:</h2>
+    <p>Livre.</p>
+  </div>
+  <div class="temposinopse">
+    <h2>Tempo de duração:</h2>
+    <p>98 minutos.</p>
+  </div>
+  <div class="resumosinopse">
+    <h2>Sinopse:</h2>
+    <p>Matilda é uma inteligente e extraordinária menina que descobre ter poderes telecinéticos. Apesar de sua família desinteressada e uma diretora de escola tirana, ela usa seus dons para enfrentar as adversidades e lutar contra a injustiça.</p>
+    <div class="voltar">
+      <a href="filmes.html">Voltar</a>
+    </div>  
+  </div>
+</div>
+
+
+<div class="ondinha">
+<svg width="100%" height="100%" id="svg" viewBox="0 0 1440 690" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150"><path d="M 0,700 C 0,700 0,140 0,140 C 69.2694043655198,129.53025033912934 138.5388087310396,119.0605006782587 181,110 C 223.4611912689604,100.9394993217413 239.1141694413614,93.28824762609449 293,108 C 346.8858305586386,122.71175237390551 439.00451350351466,159.7865088173634 502,172 C 564.9954864964853,184.2134911826366 598.86777654458,171.56571710445186 644,152 C 689.13222345542,132.43428289554814 745.524380318165,105.95062276482918 807,116 C 868.475619681835,126.04937723517082 935.0347021827599,172.63179183623137 988,188 C 1040.96529781724,203.36820816376863 1080.3368109507953,187.5222098902454 1127,185 C 1173.6631890492047,182.4777901097546 1227.6180540140583,193.27936860278703 1281,188 C 1334.3819459859417,182.72063139721297 1387.1909729929707,161.36031569860648 1440,140 C 1440,140 1440,700 1440,700 Z" stroke="none" stroke-width="0" fill="#979dbb" fill-opacity="0.265" class="transition-all duration-300 ease-in-out delay-150 path-0"></path><path d="M 0,700 C 0,700 0,280 0,280 C 51.995215192995445,269.83756320138116 103.99043038599089,259.6751264027624 160,272 C 216.0095696140091,284.3248735972376 276.033493649032,319.1370575903317 330,317 C 383.966506350968,314.8629424096683 431.8755950178813,275.77664323591074 490,265 C 548.1244049821187,254.22335676408926 616.4641262794426,271.7563694660254 661,264 C 705.5358737205574,256.2436305339746 726.2678998643485,223.1978788999877 779,231 C 831.7321001356515,238.8021211000123 916.4642742631643,287.4521149340238 983,311 C 1049.5357257368357,334.5478850659762 1097.8750030829945,332.9936613639167 1146,318 C 1194.1249969170055,303.0063386360833 1242.0357134048586,274.57323961030954 1291,266 C 1339.9642865951414,257.42676038969046 1389.9821432975707,268.71338019484523 1440,280 C 1440,280 1440,700 1440,700 Z" stroke="none" stroke-width="0" fill="#979dbb" fill-opacity="0.4" class="transition-all duration-300 ease-in-out delay-150 path-1"></path><path d="M 0,700 C 0,700 0,420 0,420 C 49.56053767418916,429.5446540880503 99.12107534837833,439.08930817610064 162,446 C 224.87892465162167,452.91069182389936 301.0762362806758,457.1874213836478 349,444 C 396.9237637193242,430.8125786163522 416.57397952891847,400.16100628930815 468,382 C 519.4260204710815,363.83899371069185 602.6278456036501,358.16855345911955 662,371 C 721.3721543963499,383.83144654088045 756.9146380564806,415.1647798742138 802,411 C 847.0853619435194,406.8352201257862 901.7136021704279,367.17232704402517 956,368 C 1010.2863978295721,368.82767295597483 1064.230953261808,410.1459119496855 1114,431 C 1163.769046738192,451.8540880503145 1209.3625847823407,452.24402515723267 1263,447 C 1316.6374152176593,441.75597484276733 1378.3187076088298,430.87798742138364 1440,420 C 1440,420 1440,700 1440,700 Z" stroke="none" stroke-width="0" fill="#979dbb" fill-opacity="0.53" class="transition-all duration-300 ease-in-out delay-150 path-2"></path><path d="M 0,700 C 0,700 0,560 0,560 C 55.73767418917252,570.3744974719448 111.47534837834505,580.7489949438894 167,581 C 222.52465162165495,581.2510050561106 277.83628067579235,571.3785176963868 331,576 C 384.16371932420765,580.6214823036132 435.17952891848563,599.7369342705636 489,583 C 542.8204710815144,566.2630657294364 599.4456036502651,513.6737452213589 645,518 C 690.5543963497349,522.3262547786411 725.038056480454,583.5680848440005 777,607 C 828.961943519546,630.4319151559995 898.4021704279196,616.053915402639 964,601 C 1029.5978295720804,585.946084597361 1091.353261807868,570.2162535454434 1143,551 C 1194.646738192132,531.7837464545566 1236.184782340609,509.0810704155876 1284,510 C 1331.815217659391,510.9189295844124 1385.9076088296956,535.4594647922062 1440,560 C 1440,560 1440,700 1440,700 Z" stroke="none" stroke-width="0" fill="#979dbb" fill-opacity="1" class="transition-all duration-300 ease-in-out delay-150 path-3"></path></svg></body>
+</html>
